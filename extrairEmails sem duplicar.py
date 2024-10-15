@@ -21,4 +21,4 @@ def extrair_emails(arquivo_entrada, arquivo_saida):
 
 # Substitua 'entrada.txt' pelo caminho do arquivo original
 # e 'saida.txt' pelo caminho do arquivo onde você quer salvar os emails
-extrair_emails('/home/winstons/Downloads/web scrap/secretarias_obras_mg.txt', '/home/winstons/Downloads/web scrap/emails_obras_mg.txt')
+extrair_emails('secretarias_saude_mg.txt', 'emails_saude_mg.txt')
