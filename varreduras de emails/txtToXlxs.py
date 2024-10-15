@@ -1,6 +1,6 @@
 import pandas as pd
 
-with open("contatos.es.txt", "r", encoding="utf-8") as file:
+with open("contatos/emails 15-11.txt", "r", encoding="utf-8") as file:
     texto = file.read()
 
 # Vamos separar as partes por "Contatos encontrados em"
@@ -50,4 +50,4 @@ df = pd.DataFrame({
 print(df)
 
 # Salvar os dados em uma planilha Excel
-df.to_excel("contatos.es.xlsx", index=False)
+df.to_excel("emails15-11.xlsx", index=False)

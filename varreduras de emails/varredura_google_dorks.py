@@ -24,7 +24,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 # Abrir o Google e realizar a pesquisa
 driver.get('https://www.google.com')
 search_box = driver.find_element("name", 'q')
-search_query = 'site:mg.gov.br "secretaria de saúde" e-mail'
+search_query = 'site:rs.gov.br "secretaria de saúde" e-mail'
 search_box.send_keys(search_query)
 search_box.send_keys(Keys.RETURN)
 
@@ -32,10 +32,10 @@ time.sleep(3)  # Espera para os resultados carregarem
 
 # Captura os primeiros links de resultados da pesquisa
 links = driver.find_elements("css selector", 'a')
-result_urls = [link.get_attribute('href') for link in links if link.get_attribute('href') and 'mg.gov.br' in link.get_attribute('href')]
+result_urls = [link.get_attribute('href') for link in links if link.get_attribute('href') and 'rs.gov.br' in link.get_attribute('href')]
 
 # Abrir o arquivo para salvar os resultados
-with open('secretarias_saude_mg.txt', 'w') as f:
+with open('secretarias_saude_rs.txt', 'w') as f:
     for url in result_urls:
         try:
             driver.get(url)
